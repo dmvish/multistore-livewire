@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import 'components/forms';
+@import 'components/page-header';
+
+@layer base {
+    html,
+    body {
+        @apply font-roboto;
+    }
+}
+
+.app-logo {
+    @apply mb-8;
+
+    a {
+        @apply block text-center w-full font-bold text-xl text-white py-3;
+    }
+}
+
+.aside-menu {
+    @apply mb-8 px-4;
+
+    a {
+        @apply py-2 px-3;
+        @apply block cursor-pointer text-sm rounded;
+        @apply transition-colors duration-75;
+
+        color: #636d7b;
+        font-weight: 500;
+
+        &:hover,
+        &.active-link {
+            @apply text-white;
+
+            background-color: #101520;
+        }
+    }
+
+    li.delimiter {
+        @apply my-4 mx-3;
+
+        height: 1px;
+        background-color: #101520;
+    }
+}
+
+.app-aside {
+    background-color: #1f2532;
+}
+
+
